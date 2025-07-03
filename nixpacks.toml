@@ -4,5 +4,5 @@ nixPkgs = ["php82", "php82Packages.composer"]
 [phases.build]
 cmds = ["composer install --no-dev --optimize-autoloader", "php artisan config:cache", "php artisan route:cache"]
 
-[phases.start]
+[start]
 cmd = "php artisan serve --host=0.0.0.0 --port=8080"
